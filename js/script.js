@@ -9,13 +9,14 @@ function updateCountdown() {
     const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
     const seconds = Math.floor((timeLeft / 1000) % 60);
 
-    document.getElementById("timer").innerHTML =
-        `${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds`;
+    document.getElementById("days").textContent = String(days).padStart(2, '0');
+    document.getElementById("hours").textContent = String(hours).padStart(2, '0');
+    document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
+    document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
 }
 setInterval(updateCountdown, 1000);
 updateCountdown();
 
-// Mobile menu toggle
 document.addEventListener("DOMContentLoaded", function () {
     const toggleButton = document.getElementById("menu-toggle");
     const navLinks = document.querySelector("nav ul");

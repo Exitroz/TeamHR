@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Georgia', serif;
-    background-image: url('../images/your-photo-or-video.jpg');
+    background-image: url('../images/5.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -190,5 +190,70 @@ h2, h3 {
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
+    }
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    margin: 30px auto 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: fit-content;
+    color: white;
+}
+
+.time-segment {
+    text-align: center;
+}
+
+.time-segment .number {
+    font-size: 2.5em;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.time-segment .label {
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .countdown {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .time-segment .number {
+        font-size: 1.8em;
+    }
+
+    .time-segment .label {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2, h3 {
+        font-size: 1.2em;
+    }
+
+    nav a {
+        font-size: 0.9em;
+    }
+
+    .button {
+        font-size: 0.9em;
     }
 }
